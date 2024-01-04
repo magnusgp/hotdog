@@ -1,0 +1,26 @@
+# config/config.yaml
+
+defaults:
+  - model: hotdog_network
+  - optimizer: adam
+
+model:
+  name: hotdog_network
+  params:
+    dropout_conv: 0.05
+    dropout_fc: 0.1
+
+optimizer:
+  name: adam
+  params:
+    lr: 0.001
+
+dataset:
+  name: hotdog_nothotdog
+  params:
+    batch_size: 64
+    shuffle: true
+    num_workers: 4
+
+training:
+  epochs: 10
