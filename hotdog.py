@@ -153,11 +153,6 @@ if __name__ == "__main__":
             # Log training loss to WandB
             wandb.log({"Training Loss": loss.item()})
             
-            # # Print statistics
-            # running_loss += loss.item()
-            # if i % 100 == 99:  # Print every 100 mini-batches
-            #     print(f"[Epoch {epoch + 1}, Batch {i + 1}] Loss: {running_loss / 100:.3f}")
-            #     running_loss = 0.0
         if epoch % 10 == 9:
             # Log training accuracy to WandB
             _, predicted = torch.max(outputs.data, 1)
